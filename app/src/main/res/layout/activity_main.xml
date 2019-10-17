@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/green">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <Button
+            android:id="@+id/btn_siswa"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:onClick="handlerButtonSiswa"
+            android:text="Siswa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_guru"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Guru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_siswa" />
+
+        <Button
+            android:id="@+id/btn_mata_pelajaran"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Mata pelajaran"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_guru" />
+
+        <Button
+            android:id="@+id/btn_kelas"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Kelas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mata_pelajaran" />
+
+        <Button
+            android:id="@+id/btn_minat"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Minat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_kelas" />
+
+        <Button
+            android:id="@+id/btn_bakat"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Bakat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_minat" />
+
+        <Button
+            android:id="@+id/btn_prestasi"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Prestasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_bakat" />
+
+        <Button
+            android:id="@+id/btn_rumah"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="Rumah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_prestasi" />
+
+        <Button
+            android:id="@+id/btn_keluarga"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="keluarga"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rumah" />
+
+        <Button
+            android:id="@+id/btn_extra"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:text="extra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_keluarga" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
