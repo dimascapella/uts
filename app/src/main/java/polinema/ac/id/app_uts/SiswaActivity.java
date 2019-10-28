@@ -10,11 +10,7 @@ import android.widget.EditText;
 
 public class SiswaActivity extends AppCompatActivity {
 
-    private EditText INnis;
-    private EditText INnama;
-    private EditText INalamat;
-    private EditText INhp;
-    private EditText INketerangan;
+    private EditText INnis, INnama, INalamat, INhp, INketerangan;
     private String nis, nama, alamat, hp, keterangan;
 
     @Override
@@ -36,15 +32,28 @@ public class SiswaActivity extends AppCompatActivity {
         hp = INhp.getText().toString();
         keterangan = INketerangan.getText().toString();
 
-        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setTitle("Data Siswa");
-        alertDialog.setMessage("NIS : " + nis + "\nNama : " + nama + "\nAlamat : " + alamat + "\nHandphone : " + hp + "\nketerangan : " + keterangan);
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Close Popup",
+        if(nis.isEmpty() && nama.isEmpty() && alamat.isEmpty() && hp.isEmpty() && keterangan.isEmpty()){
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle("Error");
+            alertDialog.setMessage("Isi Kembali Form Anda");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Close",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
                 });
-        alertDialog.show();
+            alertDialog.show();
+        }else{
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle("Data Siswa");
+            alertDialog.setMessage("NIS : " + nis + "\nNama : " + nama + "\nAlamat : " + alamat + "\nHandphone : " + hp + "\nketerangan : " + keterangan);
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Close",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+            alertDialog.show();
+        }
     }
 }
